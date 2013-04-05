@@ -1,1 +1,0 @@
-== Welcome to Rails 4 Playground
