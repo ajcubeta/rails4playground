@@ -3,6 +3,24 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0.beta1'
 gem 'pg'
 
+# Authentication
+gem 'devise', '1.5.3'
+gem "nifty-generators"
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.0.1'
+gem "postmark-rails"
+gem "capistrano"
+gem 'tire'
+gem 'haml'
+gem 'nokogiri'
+gem 'paperclip'
+gem 'will_paginate'
+gem 'mimemagic'
+gem 'thin'
+gem 'RedCloth'
+gem 'protected_attributes'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -11,15 +29,6 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 1.0.1'
-gem "postmark-rails"
-gem "capistrano"
-gem 'tire'
-gem 'will_paginate'
-
 
 group :development do
   gem "pry"
