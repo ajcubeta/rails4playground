@@ -1,0 +1,10 @@
+- if flash.any?
+  - if flash.notice =~ /Signed in successfully|Signed out successfully/
+  - else
+    - if flash.notice
+      .flash.layout.mod{:title => "Click to dismiss"}
+        .msg.notice= flash.notice
+    - elsif flash.alert
+      .flash.layout.mod{:title => "Click to dismiss"}
+        .msg.alert= flash.alert
+    - flash.clear

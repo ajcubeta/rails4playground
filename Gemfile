@@ -6,6 +6,8 @@ gem 'pg'
 # Authentication
 gem 'devise', '1.5.3'
 gem "nifty-generators"
+gem 'linkedin'
+gem 'omniauth-linkedin'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'

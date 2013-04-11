@@ -128,6 +128,7 @@ GEM
     googlecharts (1.6.8)
     haml (4.0.2)
       tilt
+    hashie (1.2.0)
     hashr (0.0.22)
     highline (1.6.16)
     hike (1.2.1)
@@ -151,6 +152,10 @@ GEM
     kramdown (1.0.1)
     launchy (2.2.0)
       addressable (~> 2.3)
+    linkedin (0.3.7)
+      hashie (~> 1.2)
+      multi_json (~> 1.0)
+      oauth (~> 0.4)
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -197,6 +202,15 @@ GEM
       net-ssh (>= 2.6.5)
     nifty-generators (0.4.6)
     nokogiri (1.5.9)
+    oauth (0.4.7)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-linkedin (0.1.0)
+      omniauth-oauth (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     orm_adapter (0.0.7)
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
@@ -354,10 +368,12 @@ DEPENDENCIES
   jquery-rails
   konacha
   launchy
+  linkedin
   metric_fu
   mimemagic
   nifty-generators
   nokogiri
+  omniauth-linkedin
   paperclip
   pg
   postmark-rails
