@@ -8,7 +8,7 @@ Devise.setup do |config|
 
   # Configure the class responsible to send e-mails.
   config.mailer = "Devise::Mailer"
-  
+
   config.timeout_in = 1.month
 
   # ==> ORM configuration
@@ -69,7 +69,7 @@ Devise.setup do |config|
   # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use
   # a value less than 10 in other environments.
   # config.stretches = Rails.env.test? ? 1 : 10
-  config.stretches = 10  
+  config.stretches = 20
 
   # Setup a pepper to generate the encrypted password.
   # config.pepper = "012245f4e707f5d7d5c23edac59317f8f2383ade381fd2ec7b1abb58d78a531bb9cc2a198fcf9709c1e9849971c1e2bce57beb622bb40d646375fbacc84c797a"
@@ -158,7 +158,8 @@ Devise.setup do |config|
   # and :restful_authentication_sha1 (then you should set stretches to 10, and copy
   # REST_AUTH_SITE_KEY to pepper)
   # config.encryptor = :sha512
-  config.encryptor = :restful_authentication_sha1
+  # config.encryptor = :restful_authentication_sha1
+  config.encryptor = :authlogic_sha512
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key
@@ -214,7 +215,7 @@ Devise.setup do |config|
   # end
 end
 
-Warden::Manager.after_authentication do |user, auth, opts|
-  # Warm user cache here
-  Resque.enqueue(WarmCache, user.id)
-end
+# Warden::Manager.after_authentication do |user, auth, opts|
+#   # Warm user cache here
+#   Resque.enqueue(WarmCache, user.id)
+# end

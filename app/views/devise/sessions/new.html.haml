@@ -1,0 +1,21 @@
+%section#login
+  - url = Rails.env.development? ? session_path(resource_name) : session_path(resource_name, :secure => true)
+  = form_for(resource, :as => resource_name, :url => url, :html => { :class => "entry" }) do |f|
+    %h1 Rails 4 Playground!
+    %fieldset
+      %div
+        = f.label :email, "Email"
+        = f.text_field :email, :autofocus => true, :size => 60
+
+      %div
+        = f.label :password
+        = f.password_field :password, :size => 60
+
+    .action
+      = f.submit "Log in", :class => "btn"
+      or
+      = link_to "Sign up", new_registration_path(resource_name)
+
+    %br
+    .p
+      = render :partial => "devise/shared/links"

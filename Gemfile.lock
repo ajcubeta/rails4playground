@@ -313,6 +313,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    syck (1.0.0)
     temple (0.5.5)
     terminal-table (1.4.5)
     thin (1.5.1)
@@ -383,6 +384,8 @@ DEPENDENCIES
   rails (= 4.0.0.beta1)
   rspec-rails (~> 2.13.0)
   sass-rails (~> 4.0.0.beta1)
+  sprockets-rails
+  syck
   thin
   timecop
   tire

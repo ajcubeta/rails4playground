@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.0.beta1'
 gem 'pg'
-
-# Authentication
 gem 'devise', '1.5.3'
+gem 'protected_attributes'
+gem 'jquery-rails'
+gem 'sprockets-rails'
 gem "nifty-generators"
 gem 'linkedin'
 gem 'omniauth-linkedin'
-gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 gem "postmark-rails"
@@ -21,7 +21,7 @@ gem 'will_paginate'
 gem 'mimemagic'
 gem 'thin'
 gem 'RedCloth'
-gem 'protected_attributes'
+gem 'syck'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

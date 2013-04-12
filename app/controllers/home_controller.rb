@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
+  # include Home
+  layout "public"
+
   def index
-    @title = "This is a test"
+    @title = "Rails 4 Playground"
   end
 
   def current
